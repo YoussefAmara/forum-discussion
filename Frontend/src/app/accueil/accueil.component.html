@@ -1,0 +1,83 @@
+<app-nav></app-nav>
+
+<div itemtype="http://schema.org/ItemList" class="col-md-8 main-content">
+<link itemprop="url" href="https://qaengine.enginethemes.com" style="display: none;">
+<div class="clearfix"></div>
+<div class="row select-category">
+    <div itemprop="mainEntityOfPage" class="col-md-6 col-xs-6 current-category">
+        <span itemprop="name">Questions <i class="fa fa-question-circle"></i></span>
+    </div>
+</div>
+
+
+<div class="row question-filter" id="question_filter">
+    <div class="col-md-6 col-xs-6 sort-questions">
+        <ul>
+            <li>
+                <a class="active" href="https://qaengine.enginethemes.com/">Latest</a>
+            </li>
+        </ul>
+    </div>
+ </div>
+
+<div *ngFor="let tab of Tab" >
+ <div class="main-questions-list">
+      <ul id="main_questions_list">
+        <li itemprop="itemListElement"  class="question-item post-2212 poll type-poll status-publish format-standard hentry question_category-music" data-id="2212">
+            <div itemprop="item" itemscope="">
+                <div class="col-md-8 col-xs-8 q-left-content">
+                    <div class="q-ltop-content">
+                        <h2 itemprop="name">
+                            <a itemprop="url" routerLink="/question/{{tab.id}}" class="question-title">{{ tab.title }}</a>
+                        </h2>
+                    </div>
+                    <div class="q-lbtm-content">
+                      <div class="question-cat">
+                         <ul class="question-tags">
+                           <li>
+                              <a class="q-tag" href="">{{ tab.space.title }}</a></li>
+                          </ul>
+                            <div class="clearfix"></div>
+                          <div [ngSwitch]='6'>
+                            <a itemprop="author" itemscope=""  href="">
+                              <span class="author-avatar">
+                                <img itemprop="image" src="../../assets/avatar.jpg" class="avatar" alt=""></span>
+
+                             </a>
+                               <span title="1529" class="user-badge" style="background-color:#f39c12;" *ngSwitchCase='6'>{{tab.user.role.role}}</span>
+                               <span title="1529" class="user-badge" style="background-color:#780978;" *ngSwitchCase='5'>aaaa</span>
+                               <span title="1529" class="user-badge" style="background-color:#f51818;" *ngSwitchDefault>{{tab.user.role.role}}</span>
+
+                             <span itemprop="dateCreated" datetime="on January 20, 2016" class="question-time">
+                               Asked on  {{ tab.update_date | date }}           </span>
+                          </div>
+                        </div>
+                     </div>
+                 </div>
+            <div class="col-md-4 col-xs-4 q-right-content">
+               <ul class="question-statistic">
+                 <div *ngIf="tab.hasResponse==true; else another">
+                  	<li class="active"><span itemprop="answerCount" class="poll-answers"><i class="fa fa-check"></i></span>answers</li>
+                 </div>
+                 <ng-template #another><li><span itemprop="answerCount" class="poll-answers"><i class="fa fa-times"></i></span>answers</li></ng-template>
+
+                 <div *ngIf="tab.resolved==true; else Another">
+                   <li class="active"><span itemprop="answerCount" class="poll-answers"><i class="fa fa-check"></i></span>resolved</li>
+                 </div>
+                 <ng-template #Another><li><span itemprop="answerCount" class="poll-answers"><i class="fa fa-times"></i></span>resolved</li></ng-template>
+
+              </ul>
+             <div class="pumping"></div>
+           </div>
+           <div class="clearfix"></div>
+           </div>
+        </li>
+       </ul>
+   </div>
+
+
+<div class="clearfix"></div>
+</div>
+</div>
+
+<app-footer></app-footer>

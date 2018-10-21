@@ -1,0 +1,100 @@
+<app-nav></app-nav>
+
+<div *ngFor="let tab of Tab">
+  <div class="col-md-8 main-content single-content">
+     <div class="row select-category single-head">
+         <div class="col-md-2 col-xs-2">
+             <span class="back">
+                 <i class="fa fa-angle-double-left"></i> <a >Home</a>
+             </span>
+         </div>
+         <div class="col-md-8 col-xs-8">
+             <h1 itemprop="name">{{tab.title}}</h1>
+         </div>
+     </div>
+     <div id="question_content" class="row question-main-content question-item" data-id="63">
+
+         <div class="col-md-1 col-xs-1 vote-block"></div>
+         <div class="col-md-11 col-xs-11 q-right-content">
+
+             <div class="top-content">
+                <ul class="question-tags">
+                    <li><a class="q-tag" href="">{{tab.space.title}}</a></li></ul>
+             </div>
+
+             <div class="clearfix"></div>
+
+             <div itemprop="text" class="question-content">
+                 <p><span style="color: #333333; font-family: Georgia, Times, 'Times New Roman', serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 21px; text-align: start; text-indent: 0px; float: none;">
+                  <span class="Apple-converted-space">{{tab.description}}<br>
+             </span></span></p>
+             </div>
+
+             <div class="row">
+                 <div class="col-md-8 col-xs-8 question-cat" data-user="4">
+                     <a>
+                         <span>
+                             <span class="author-avatar">
+                                 <img itemprop="image" src="../../assets/avatar.jpg" class="avatar" alt="">
+                              </span>
+                         </span>
+                     </a>
+                     <span title="46" class="user-badge" style="background-color:#04aad4;">{{tab.user.role.role}}</span>
+                     <span class="question-time" itemprop="dateCreated" >
+                         Asked on {{tab.update_date | date }} </span>
+                     </div>
+                </div>
+
+             <div class="clearfix"></div>
+          </div>
+         <div class="clearfix"></div>
+     </div>
+
+
+ <div class="main-questions-list">
+     <ul id="main_questions_list">
+        <li itemprop="itemListElement" itemscope=""  class="question-item post-57 question type-question status-publish hentry question_category-marketing qa_tag-demo qa_tag-marketers qa_tag-marketing-2 qa_tag-media" data-id="57">
+             <div itemprop="item">
+                 <div class="col-md-1 col-xs-1"></div>
+                 <div class="col-md-8 col-xs-8 q-left-content">
+                     <div class="q-ltop-content">
+                         <h2 itemprop="name">
+                             <a itemprop="url" class="question-title">What were the latest trends in marketing for 2013?</a>
+                         </h2>
+                     </div>
+         <div class="q-lbtm-content">
+             <div itemprop="text" class="question-excerpt">
+                 <p>What strategies should marketers be focussing in the year of new age media ? Lorem ipsum dolor sit amet, consectetur …</p>
+             </div>
+             <div class="question-cat">
+                 <div class="clearfix"></div>
+                 <a>
+                 <span class="author-avatar">
+                     <img itemprop="image" src="../../assets/avatar.jpg" class="avatar" alt=""></span>
+                     <span itemprop="name" class="author-name">Alex</span>
+                 </a>
+                 <span title="525" class="user-badge" style="background-color:#ffbf00;">Vice Professor</span><span itemprop="dateCreated" datetime="on June 5, 2014" class="question-time">
+                 Asked on June 5, 2014 in                </span>
+              </div>
+               </div>
+           </div>
+           <div class="col-md-3 col-xs-3 q-right-content">
+               <ul class="question-statistic">
+                   <li class="">
+                   <span itemprop="answerCount" class="question-answers">0</span>
+                       resolved               </li>
+                   <li>
+                   <span itemprop="upvoteCount" class="question-votes">0</span>
+                       votes                </li>
+               </ul>
+               <div class="pumping"></div>
+           </div>
+           <div class="clearfix"></div>
+       </div></li></ul>
+    </div><!--liste reponse !-->
+
+
+   <div class="clearfix"></div>
+  </div>
+
+</div>
